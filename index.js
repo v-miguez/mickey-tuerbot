@@ -2,9 +2,9 @@ const Telegraf = require('telegraf')
 const express = require('express')
 const expressApp = express()
 
-const bot = new Telegraf(process.env.BOT_TOKEN)
+const bot = new Telegraf("621360089:AAHlBMMYJpypwLmDEWeSehX1mj0xHEf4S2w")
 expressApp.use(bot.webhookCallback('/secret-path'))
-bot.telegram.setWebhook('https://server.tld:8443/secret-path')
+bot.telegram.setWebhook('https://bc151c44.ngrok.io')
 
 expressApp.get('/', (req, res) => {
   res.send('Hello World!')
